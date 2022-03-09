@@ -6,7 +6,7 @@ for (i = 0; i < accBtn.length; i++) {
     accBtn[i].addEventListener("click", function() { 
         this.classList.toggle("active");
         const accContent = this.nextElementSibling;
-        if (accContent.style.display === "block") {
+        if (!this.classList.contains("active")) {
             accContent.style.display = "none";
         } else {
             accContent.style.display = "block";
